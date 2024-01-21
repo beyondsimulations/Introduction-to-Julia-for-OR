@@ -17,10 +17,10 @@ Each tutorial combines theoretical explanations with practical code examples and
 ## Repository Structure
 The repository is organized into folders, each representing a major topic. Here's what you can expect:
 
-1 `/BasicConcepts` - Tutorials on vectors, matrices, tuples, loops, conditional statements and functions.
-2 `/PackagesAndData` - Learn about Package Management, DataFrames, reading and writing files and plotting.
-3 `/Modelling` - Explore modelling algebraic problems in JuMP.
-4 `/AdvancedConcepts` - Understand advanced concepts, such as structs, multi-threading ans performace.
+1. `/BasicConcepts` - Tutorials on vectors, matrices, tuples, loops, conditional statements and functions.
+2. `/PackagesAndData` - Learn about Package Management, DataFrames, reading and writing files and plotting.
+3. `/Modelling` - Explore modelling algebraic problems in JuMP.
+4. `/AdvancedConcepts` - Understand advanced concepts, such as structs, multi-threading ans performace.
 
 ## How to Use This Repository
 1. Clone the repository to your local machine.
