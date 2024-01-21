@@ -8,7 +8,7 @@
 
 ## Section 1: The Local and Global Scope
 # -------------------------------------
-println("Section 10: The Local and Global Scope")
+println("Section 1: The Local and Global Scope")
 
 # In Julia, variables within a function or a loop are encapsulated in a local scope, 
 # meaning their visibility and lifespan are confined to that block of code.
@@ -61,6 +61,7 @@ println("Section 3: Working with `global` and `local` Keywords")
 ## Exercise 2.1: Experiment with Local Variables  in a Potentially Global Context Using `local`
 # Try to execude the following block of code. The objective is to redefine the 'explicit_local_variable' to "end"
 # within the following loop.
+
 explicit_local_variable = "start"
 println("At the start of the loop, explicit_local_variable is: ", explicit_local_variable)
 for i in 1:3

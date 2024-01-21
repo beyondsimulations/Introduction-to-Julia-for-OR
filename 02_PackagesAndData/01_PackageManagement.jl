@@ -1,20 +1,33 @@
-# Comprehensive Guide to Packages and Package Management in Julia
+# Guide to Packages and Package Management in Julia
 # ==============================================================
 
 # This interactive script serves as an in-depth guide to understanding packages and package management in Julia.
 # Delve into the utilization of the package manager, the processes of adding, updating, and removing packages, 
-# and the art of managing distinct environments.
-# Note: While this script offers guidance, remember that package management commands should be executed in Julia's REPL or a Jupyter notebook.
+# and management of distinct environments.
+# Note: While this script offers guidance, package management commands should be executed in Julia's REPL.
 
 ## Section 1: Using the Package Manager
 # ------------------------------------
 println("Section 1: Using the Package Manager")
 
-# Julia's built-in package manager, Pkg, offers powerful capabilities for package operations. Start by importing the Pkg module.
+# Julia's built-in package manager, Pkg, provides a robust set of tools for managing packages. 
+# To utilize these tools, start by importing the Pkg module. 
+# This module allows you to add, update, and remove packages, and manage environments efficiently.
+# Note, 'import PackageName' lets you access exported functions with 'PackageName.function', 
+# while 'using PackageName' imports all exported names into the local namespace for direct access.
 
 ## Exercise 1.1: Import the Pkg Module
-# Import the Pkg module to begin managing packages.
+# Import the Pkg module to start managing packages effectively.
+
+# YOUR CODE BELOW
 import Pkg
+
+# Test your answer
+try 
+    Pkg.update()
+catch e
+    @error "The Pkg module was not imported yet! Have you used the correct syntax?"
+end
 
 println("Pkg module imported successfully!")
 
@@ -22,45 +35,47 @@ println("Pkg module imported successfully!")
 # --------------------------
 println("Section 2: Adding Packages")
 
-# Adding packages in Julia is straightforward using the Pkg.add() function.
+# Adding packages in Julia is straightforward using the Pkg.add("PackageName") function.
+# Replace 'PackageName' with the actual package name you wish to add.
 
-## Exercise 2.1: Add a Package
-# Use Pkg.add() to add a package. Replace 'PackageName' with the actual package name you wish to add.
-# Pkg.add("PackageName")
+## Exercise 2.1: Add a Package. Use Pkg.add() to add the Package 'DataFrames' that we will use later.
 
-println("Package added successfully! (Note: Execute the actual command in REPL or a Jupyter notebook)")
+# YOUR CODE BELOW
+Pkg.add("DataFrames")
+
+# Test your answer
+try 
+    using DataFrames
+catch e
+    @error "Package was not added yet! Have you used the correct syntax?"
+end
+
+println("Package added successfully!")
 
 ## Section 3: Updating and Removing Packages
 # -----------------------------------------
 println("Section 3: Updating and Removing Packages")
 
-# Keeping packages up-to-date and removing unnecessary ones is crucial for the health and performance of your Julia environment.
+# Maintaining your Julia environment involves keeping your packages up-to-date and removing those that are 
+# no longer necessary. Use Pkg.update("PackageName") to update individual packages, or simply Pkg.update() 
+# to update all packages. To remove an obsolete package, use Pkg.rm("PackageName"). Remember to replace 
+# 'PackageName' with the actual name of the package you wish to manage.
 
-## Exercise 3.1: Update Packages
-# Update all installed packages to their latest versions using Pkg.update().
-# Pkg.update()
-
-## Exercise 3.2: Remove a Package
-# Remove a package that is no longer needed using Pkg.rm(). Replace 'PackageName' with the actual package name you wish to remove.
-# Pkg.rm("PackageName")
-
-println("Packages updated and removed successfully! (Note: Execute the actual commands in REPL or a Jupyter notebook)")
+println("Package management tips successfully noted!")
 
 ## Section 4: Managing Environments
 # -------------------------------
 println("Section 4: Managing Environments")
 
-# Julia environments are powerful tools for dependency management, ensuring that projects have their own isolated package sets.
+# Julia environments are essential for keeping project dependencies isolated and organized.
+# It's a best practice to create a new environment for each project to avoid conflicts between package versions.
+# Activate a new environment with Pkg.activate("new_environment") and add packages to it with Pkg.add("PackageName").
+# This ensures that each of your projects has a clean, dedicated set of dependencies.
 
-## Exercise 4.1: Manage Environments
-# Create and activate a new environment, and then add a package to it.
-# Pkg.activate("new_environment")
-# Pkg.add("PackageName")
-
-println("Environment managed successfully! (Note: Execute the actual commands in REPL or a Jupyter notebook)")
+println("Environment management successfully explained! (Note: Execute the actual commands in REPL!)")
 
 ## Conclusion
 # -----------
 println("Congratulations! You've completed the tutorial on packages and package management in Julia.")
-println("Your newfound skills in using the package manager, adding, updating, and removing packages, and managing environments will significantly enhance your Julia programming experience.")
-println("These foundational skills are vital for effectively managing and utilizing external libraries and tools in your Julia projects.")
+println("These skills are vital for effectively managing and utilizing external libraries in your Julia projects.")
+println("Continue to the next file to learn more.")

@@ -31,7 +31,7 @@ println("Section 1: For Loops")
 # Initialize sum_numbers to 0. The sum will accumulate in this variable.
 sum_numbers = 0
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 for i in 1:5
     sum_numbers += i  # Increment sum_numbers by i during each iteration.
 end
@@ -46,7 +46,7 @@ println("Sum of numbers from 1 to 5: ", sum_numbers)
 # Start by initializing sum_evens to 0 to accumulate the sum of even numbers.
 sum_evens = 0
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 for i in 1:10
     if i % 2 == 0
         sum_evens += i  # Accumulate only even numbers.
@@ -64,7 +64,7 @@ println("Sum of even numbers from 1 to 10: ", sum_evens)
 fruits = ["apple", "banana", "cherry"]
 current_fruit = "None"
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 for fruit in fruits
     current_fruit = fruit
     if current_fruit == "banana"
@@ -87,7 +87,7 @@ println("Section 2: While Loops for Conditional Execution")
 # Initialize current_value to 10.
 current_value = 10
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 println("Subtracting from 10 until less than 3:")
 while current_value >= 3
     println(current_value)  # Output the current value.
@@ -104,7 +104,7 @@ println("The first value smaller than 3 is: ", current_value)
 # Initialize first_multiple_of_7 to 0.
 first_multiple_of_7 = 0
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 i = 51  # Start checking from 51 as we seek a multiple greater than 50.
 while true
     if i % 7 == 0
@@ -130,7 +130,7 @@ numbers1 = [1, 2, 3]
 numbers2 = [4, 5, 6]
 products = []
 
-# YOUR CODE HERE
+# YOUR CODE BELOW
 for num1 in numbers1
     for num2 in numbers2
         push!(products, num1 * num2)  # Compute product and add to 'products' array.
