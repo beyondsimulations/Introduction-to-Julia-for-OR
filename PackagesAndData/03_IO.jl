@@ -1,94 +1,73 @@
+# Introduction to Reading and Writing Files in Julia
 # =====================================================
-# Introduction to Reading and Writing External Files in Julia
-# =====================================================
 
-# This Julia script is an interactive tutorial to introduce you to reading from and writing to external files in Julia.
-# You'll learn about handling different types of files, reading data, writing data, and ensuring resource management with proper file handling.
-# Follow the instructions, write your code in the designated code blocks, and confirm your understanding with @assert statements.
+# This interactive Julia script introduces the essentials of interacting with external files.
+# It covers reading and writing text files, handling CSV, and working with delimited files using DelimitedFiles.
+# Follow the instructions, write your code in the designated code blocks, and validate your results with @assert statements.
 
+## Section 1: Working with Delimited Files
 # ---------------------------
-# Section 25: Writing to Files
-# ---------------------------
-println("Section 25: Writing to Files")
+println("Section 1: Working with Delimited Files")
 
-# Julia can write to files using the open(), write(), and close() functions, or by using a do block for automatic resource management.
+# Delimited files, such as .csv or .tsv, can be handled efficiently using the DelimitedFiles package in Julia.
 
-# Exercise 25.1: Write a string to a text file
-file_path = "example.txt"
-open(file_path, "w") do file
-    write(file, "Hello, Julia! This is a text file.")
+## Exercise 1.1: Write data to a delimited file using DelimitedFiles.
+# Note: This requires the DelimitedFiles package. But as it is part of the Julia Standard Library,
+# you can use it directly without the need to add it before.
+using DelimitedFiles
+
+# The following code writes a matrix to a CSV file, seperating values with ','.
+new_data = [10 12 6; 13 25 1; 40 30 7]
+open("ExampleData/matrix.csv", "w") do io
+    writedlm(io, new_data, ',')
 end
+println("CSV file 'matrix.csv' written successfully to folder ExampleData!")
 
-println("Data written to file successfully!")
+## Exercise 1.2: Read the same CSV file 'matrix.csv' using the function readdlm().
+# Save the matrix in the variable 'read_matrix".
 
-# ---------------------------
-# Section 26: Reading from Files
-# ---------------------------
-println("Section 26: Reading from Files")
+# YOUR CODE BELOW
+read_matrix = readdlm("ExampleData/matrix.csv", ',')
 
-# Julia can read from files using the open(), read(), readlines(), and close() functions, or by using a do block for automatic resource management.
+# Test your answer
+@assert read_matrix == new_data
+println("File 'matrix.csv' read successfully!")
 
-# Exercise 26.1: Read the contents of a text file
-content = open(read, file_path)
+## Section 2: Working with CSV Files and DataFrames
+# --------------------------------------------------
+println("Section 2: Working with CSV Files and DataFrames")
 
-# Test your reading
-@assert content == "Hello, Julia! This is a text file."
-
-println("Data read from file successfully!")
-
-# ---------------------------
-# Section 27: Working with CSV Files
-# ---------------------------
-println("Section 27: Working with CSV Files")
-
-# Julia can read and write CSV files using the CSV package. This is especially useful for data analysis.
-
-# Exercise 27.1: Write a CSV file (Note: This requires the CSV and DataFrames packages)
+# The CSV package in Julia provides powerful tools for reading and writing CSV files to and from DataFrames,
+# a common requirement in data analysis and data science projects. This requires the CSV and DataFrames packages.
+# If you solely followed the course so far, you first have to install the CSV Package before you can start using it:
+# import Pkg; Pkg.add("CSV)
 using CSV, DataFrames
 
+## Exercise 2.1: Write the following given DataFrame to a CSV file 'table_out.csv' in the folder 'ExampleData'.
+# This can be done by using the function CSV.write(). To learn the syntax, ask the inbuild help with '?' and the function name.
 data = DataFrame(Name = ["Alice", "Bob", "Charlie"], Age = [25, 30, 35])
-csv_file_path = "data.csv"
+csv_file_path = "ExampleData/table_out.csv"
+
+# YOUR CODE BELOW
 CSV.write(csv_file_path, data)
 
-println("CSV file written successfully!")
+# Test your answer
+@assert isfile("ExampleData/table_out.csv") "Sorry, the file could not be found. Have you followed all steps?"
+println("CSV file 'data.csv' written successfully!")
 
-# Exercise 27.2: Read the same CSV file
-read_data = CSV.read(csv_file_path, DataFrame)
+## Exercise 2.2: Read the CSV file 'table_in.csv' in the folder 'ExampleData' into the variable 'read_data'.
+# Here you can use the function CSV.read(). Again, use the inbuild help to familiarize yourself with the syntax.
+# Note, that you need to provide a sink for the data wehen using CSV.read(), e.g. a DataFrame.
+
+# YOUR CODE BELOW
+read_data = CSV.read("ExampleData/table_in.csv", DataFrame)
 
 # Test your CSV reading
-@assert read_data == data
+@assert read_data[1,1] == "Lisa"
+println("CSV file 'table_in.csv' read successfully!")
 
-println("CSV file read successfully!")
-
+## Conclusion
 # ---------------------------
-# Section 28: Handling JSON Files
-# ---------------------------
-println("Section 28: Handling JSON Files")
-
-# JSON files can be read and written using the JSON package in Julia.
-
-# Exercise 28.1: Write a JSON file (Note: This requires the JSON package)
-using JSON
-
-json_data = Dict("name" => "Julia", "age" => 10)
-json_file_path = "data.json"
-open(json_file_path, "w") do file
-    write(file, JSON.json(json_data))
-end
-
-println("JSON file written successfully!")
-
-# Exercise 28.2: Read the same JSON file
-read_json_data = JSON.parsefile(json_file_path)
-
-# Test your JSON reading
-@assert read_json_data == json_data
-
-println("JSON file read successfully!")
-
-# ---------------------------
-# Conclusion
-# ---------------------------
-println("Fantastic! You've completed the tutorial on reading and writing external files in Julia.")
-println("You've learned how to handle text files, CSV files, and JSON files, which are common in many data-driven applications.")
-println("These skills are crucial for data import, export, and persistence in your Julia projects.")
+println("Congratulations! You've successfully completed the tutorial on reading and writing external files in Julia.")
+println("Your new skills in handling text, CSV, and delimited files will aid your data-driven projects in Julia.")
+println("Continue to the next file to learn more.")

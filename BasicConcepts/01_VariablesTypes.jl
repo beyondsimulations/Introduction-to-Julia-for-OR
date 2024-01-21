@@ -72,6 +72,6 @@ println("Correct, you are a student now.")
 
 ## Conclusion
 # ---------------------------
-println("Congratulations! You have completed the first tutorial on Variables and Types in Julia.")
-println("In this file, you've learned about the basics of variables, integers, floats, booleans, and strings.")
+println("Congratulations! You have completed the first tutorial on Variables and Types.")
+println("You've learned about the basics of variables, integers, floats, booleans, and strings.")
 println("Continue to the next file to learn more.")
