@@ -13,6 +13,7 @@ Inside, you'll find interactive tutorials covering a wide range of topics, inclu
 - And many more Julia programming concepts!
 
 Each tutorial combines theoretical explanations with practical code examples and exercises, allowing you to apply what you've learned immediately.
+For a first start, we highly recommend to work on this Introduction togehter with the Julia Cheat Sheet  ([https://cheatsheet.juliadocs.org](https://cheatsheet.juliadocs.org)). 
 
 ## Repository Structure
 The repository is organized into folders, each representing a major topic. Here's what you can expect:
