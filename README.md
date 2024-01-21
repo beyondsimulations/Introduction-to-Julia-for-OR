@@ -31,9 +31,9 @@ The repository is organized into folders, each representing a major topic. Here'
 ## Further Reading
 To complement the hands-on tutorials in this repository, we recommend the following resources for further exploration and in-depth understanding of Julia:
 
-1. **Julia Documentation**: The official Julia documentation ([https://docs.julialang.org/](https://docs.julialang.org/)) is an excellent resource for understanding the language's features and syntax.
+1. **Julia Documentation**: The official Julia documentation is an excellent resource for understanding the language's features and syntax ([https://docs.julialang.org/](https://docs.julialang.org/)).
 2. **Think Julia**: This book is great for beginners and covers Julia programming in a comprehensive manner ([https://benlauwens.github.io/ThinkJulia.jl](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)).
-3. **JuMP Documentation**: The official documentation of JuMP is a great resource for understanding optimization modeling in Julia, covering everything from simple linear models to advanced nonlinear and mixed-integer problems. ([https://jump.dev/JuMP.jl/stable/](https://jump.dev/JuMP.jl)).
+3. **JuMP Documentation**: The official documentation of JuMP is a great resource for understanding optimization modeling in Julia, covering everything from simple linear models to advanced nonlinear and mixed-integer problems. ([https://jump.dev/JuMP.jl](https://jump.dev/JuMP.jl/stable/)).
 4. **Julia Programming for Operations Research**: This book is a fantastic ressource for students interested in Julia and Operations Research and covers a variety of topics ([https://www.chkwon.net/julia/](https://www.chkwon.net/julia/)).
 
 ## Contributing
