@@ -18,33 +18,41 @@ println("Section 1: Vectors")
 # Access elements with square brackets, e.g., fib[1:4]. Remember, Julia is 1-based indexed.
 
 ## Exercise 1.1: Create a vector 'fib' with the first five Fibonacci numbers: 1, 1, 2, 3, 5
+
 # YOUR CODE BELOW
+fib = [1, 1, 2, 3, 5]
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert fib == [1, 1, 2, 3, 5]
 println("The 'fib' vector: ", fib)
 
 ## Exercise 1.2: Append the number 8 to the 'fib' vector.
+
 # YOUR CODE BELOW
+ push!(fib,8)
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert fib == [1, 1, 2, 3, 5, 8]
 println("The 'fib' vector after appending 8: ", fib)
 
 ## Exercise 1.3: Remove the first element of the 'fib' vector. 
+
 # YOUR CODE BELOW
+ popfirst!(fib)
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert fib == [1, 2, 3, 5, 8]
 println("The 'fib' vector after removing the first element: ", fib)
 
 ## Exercise 1.4: Access and print the first three elements of the 'fib' vector, store in 'first_three_elements'.
+
 # YOUR CODE BELOW
-
-
+first_three_elements = fib[1:3]
+ 
+# YOUR CODE ABOVE
 # Test your answer
 @assert first_three_elements == fib[1:3]
 println("The first three elements of the 'fib' vector: ", first_three_elements)
@@ -59,34 +67,43 @@ println("Section 2: Matrices")
 # Add matrices of the same dimensions element-wise. Use the '.' syntax for element-wise operations (e.g., matrix = 1 .+ matrix).
 
 ## Exercise 2.1: Create a 2x3 matrix 'my_matrix' with the values: 1 2 3; 4 5 6
+
 # YOUR CODE BELOW
+my_matrix = [1 2 3; 4 5 6]
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert my_matrix == [1 2 3; 4 5 6]
 println("The 'my_matrix':\n", my_matrix)
 
-## Exercise 2.2: Change the 3rd column of the 2nd row to 17.
+## Exercise 2.2: Change the 3rd column of the 2nd row to 17 by accessing and changing the element.
+
 # YOUR CODE BELOW
+my_matrix[2,3] = 17
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert my_matrix == [1 2 3; 4 5 17]
 println("The 'my_matrix' after modification:\n", my_matrix)
 
 ## Exercise 2.3: Perform matrix addition with 'my_matrix' and 'another_matrix'.
+# Call the resulting matrix 'added_matrices'.
 another_matrix = [10 20 30; 40 50 60]
+
 # YOUR CODE BELOW
+added_matrices = my_matrix + another_matrix
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert added_matrices == [11 22 33; 44 55 77]
 println("Result of adding 'my_matrix' and 'another_matrix':\n", added_matrices)
 
 ## Exercise 2.4: Add '10' to each element in 'added_matrices'.
+
 # YOUR CODE BELOW
+added_matrices .+= 10
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert added_matrices == [21 32 43; 54 65 87]
 println("Result of adding 10 to each element in 'added_matrices':\n", added_matrices)
@@ -101,17 +118,21 @@ println("Section 3: Tuples")
 # Access tuple elements with square brackets, e.g., tuple[1].
 
 ## Exercise 3.1: Create a tuple 'my_tuple' with elements 4.0, your matrix 'added_matrices', and "Hi there!".
+
 # YOUR CODE BELOW
+my_tuple = (4.0, added_matrices, "Hi there!")
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert my_tuple == (4.0, added_matrices, "Hi there!")
 println("The 'my_tuple': ", my_tuple)
 
 ## Exercise 3.2: Access the second element of 'my_tuple', store it in 'second_element'.
+
 # YOUR CODE BELOW
+second_element = my_tuple[2]
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert second_element == [21 32 43; 54 65 87]
 println("The second element of 'my_tuple':\n", second_element)

@@ -22,17 +22,21 @@ println("Section 1: Variables")
 # variable_name = value
 
 ## Exercise 1.1: Declare a variable named 'x' and assign it the value 1
+
 # YOUR CODE BELOW
 x = 1
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert x == 1 "Check again, the value of x should be 1. Remember to assign the value directly to x."
 println("Great, you have correctly assigned the value $x to the variable 'x'.")
 
 ## Exercise 1.2: Declare a variable named 'hi' and assign it the string "Hello, Optimization!"
+
 # YOUR CODE BELOW
 hi = "Hello, Optimization!"
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert hi == "Hello, Optimization!" "Make sure the variable 'hi' contains the exact string 'Hello, Optimization!'"
 println("Good, the variable 'hi' now states \"$hi\".")
@@ -47,25 +51,31 @@ println("Section 2: Basic Types")
 # To check the type of a variable, use the typeof() function.
 
 ## Exercise 2.1: Create an Integer variable 'answerUniverse' and set it to 42
+
 # YOUR CODE BELOW
 answerUniverse = 42
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert answerUniverse == 42 "The variable 'answerUniverse' should hold the value 42."
 println("Great, the answer to all questions on the universe is $answerUniverse now.")
 
 ## Exercise 2.2: Create a Float variable 'money' and set it to 1.35
+
 # YOUR CODE BELOW
 money = 1.35
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert money == 1.35 "The variable 'money' should hold the float value 1.35."
 println("Perfect, the you have stored $money in the variable 'money'.")
 
 ## Exercise 2.3: Create a Boolean variable 'isStudent' and set it to true
+
 # YOUR CODE BELOW
 isStudent = true
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert isStudent == true "The variable 'isStudent' should be set to true."
 println("Correct, you are a student now.")

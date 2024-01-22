@@ -17,18 +17,24 @@ println("Section 1: Comparisons")
 # comparison = 5 == 5  # This will store 'true' in 'comparison'.
 
 ## Exercise 1.1: Compare if 10 is greater than 5 and store the result in 'comparison1'.
+
 # YOUR CODE BELOW
+comparison1 = 10 > 5
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert comparison1 == true
 println("comparison1 is ", comparison1)
 
 ## Exercise 1.2: Define variables 'x' with value "Hello" and 'y' with value "world".
 # Compare if 'x' is not equal to 'y' and store the result in 'comparison2'.
+
 # YOUR CODE BELOW
+x = "Hello"
+y = "world"
+comparison2 = x != y
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert x == "Hello"
 @assert y == "world"
@@ -44,26 +50,33 @@ println("Section 2: Logical Operators")
 # These are useful in complex conditions and controlling program flow.
 
 ## Exercise 2.1: Use the AND operator to check if 10 is greater than 5 and 'hello' is equal to 'hello'. Store the result in 'logic1'.
+
 # YOUR CODE BELOW
+logic1 = (10 > 5) && "hello" == "hello"
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert logic1 == true
 println("logic1 is ", logic1)
 
 ## Exercise 2.2: Use the OR operator to check if 10 is less than 5 or 'hello' is equal to 'hello'. Store in 'logic2'.
+
 # YOUR CODE BELOW
+logic2 = 10 < 5 || "hello" == "hello"
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert logic2 == true
 println("logic2 is ", logic2)
 
 ## Exercise 2.3: Check whether 10 is greater than 5 and store the result in 'logic3'.
 # Then, use the NOT operator to invert 'logic3'. Store the result in 'logic4'.
+
 # YOUR CODE BELOW
+logic3 = 10 > 5
+logic4 = !logic3
 
-
+# YOUR CODE ABOVE
 # Test your answer
 @assert logic3 == true
 @assert logic4 == false

@@ -10,10 +10,8 @@
 println("Section 1: Working with Delimited Files")
 
 # Delimited files, such as .csv or .tsv, can be handled efficiently using the DelimitedFiles package in Julia.
-
-## Exercise 1.1: Write data to a delimited file using DelimitedFiles.
-# Note: This requires the DelimitedFiles package. But as it is part of the Julia Standard Library,
-# you can use it directly without the need to add it before.
+# This requires the DelimitedFiles package. But as it is part of the Julia Standard Library,
+# you can use it directly without the need to use Pkg.add() before.
 using DelimitedFiles
 
 # The following code writes a matrix to a CSV file, seperating values with ','.
@@ -23,12 +21,14 @@ open("ExampleData/matrix.csv", "w") do io
 end
 println("CSV file 'matrix.csv' written successfully to folder ExampleData!")
 
-## Exercise 1.2: Read the same CSV file 'matrix.csv' using the function readdlm().
-# Save the matrix in the variable 'read_matrix".
+## Exercise 1.1: Read the just written CSV file 'matrix.csv' using the function readdlm().
+# Save the matrix in the variable 'read_matrix". To learn the syntax, use the inbuild help 
+# by typing '?' int the terminal. Afterwards, just typethe function nam for an explanation.
 
 # YOUR CODE BELOW
 read_matrix = readdlm("ExampleData/matrix.csv", ',')
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert read_matrix == new_data
 println("File 'matrix.csv' read successfully!")
@@ -51,6 +51,7 @@ csv_file_path = "ExampleData/table_out.csv"
 # YOUR CODE BELOW
 CSV.write(csv_file_path, data)
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert isfile("ExampleData/table_out.csv") "Sorry, the file could not be found. Have you followed all steps?"
 println("CSV file 'data.csv' written successfully!")
@@ -62,6 +63,7 @@ println("CSV file 'data.csv' written successfully!")
 # YOUR CODE BELOW
 read_data = CSV.read("ExampleData/table_in.csv", DataFrame)
 
+# YOUR CODE ABOVE
 # Test your CSV reading
 @assert read_data[1,1] == "Lisa"
 println("CSV file 'table_in.csv' read successfully!")

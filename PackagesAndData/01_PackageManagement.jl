@@ -22,6 +22,7 @@ println("Section 1: Using the Package Manager")
 # YOUR CODE BELOW
 import Pkg
 
+# YOUR CODE ABOVE
 # Test your answer
 try 
     Pkg.update()
@@ -43,6 +44,7 @@ println("Section 2: Adding Packages")
 # YOUR CODE BELOW
 Pkg.add("DataFrames")
 
+# YOUR CODE ABOVE
 # Test your answer
 try 
     using DataFrames

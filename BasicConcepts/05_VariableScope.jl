@@ -1,10 +1,11 @@
 # In-Depth Exploration of Variable Scopes in Julia
 # ================================================
 
-# This interactive Julia script is a deep dive into the nuances of variable scopes in Julia.
-# Grasp the intricacies of local and global scopes, comprehend the significance of 'local' and 'global' keywords, 
-# and discern the scope behaviors in different contexts.
-# Follow the structured instructions, implement your code in the designated blocks, and affirm your comprehension with @assert statements.
+# This interactive Julia script is a look on variable scopes in Julia.
+# Understand the intricacies of local and global scopes, comprehend the significance of 'local' and 
+# 'global' keywords, and discern the scope behaviors in different contexts.
+# Follow the structured instructions, implement your code in the designated blocks, and affirm 
+# your comprehension with @assert statements.
 
 ## Section 1: The Local and Global Scope
 # -------------------------------------
@@ -13,9 +14,11 @@ println("Section 1: The Local and Global Scope")
 # In Julia, variables within a function or a loop are encapsulated in a local scope, 
 # meaning their visibility and lifespan are confined to that block of code.
 # Variables declared in the main body of a script are in the global scope, making them accessible 
-# and modifiable across your entire program.
+# and modifiable across your entire program. We have seen this in the previous tutorial on Loops,
+# where we have created scope blocks with let ... end to prevent us from creating global variables.
 
 ## Exercise 1.1: Experiment with Local Variables in a Loop
+
 # Try to execude the following block of code:
 println("Defining a local variable within a loop:")
 for i in 1:3
@@ -32,6 +35,7 @@ println("Outside the loop, loop_variable is: ", loop_variable)
 println("Now, the loop works and the value of the 'loop_variable' is: ", loop_variable)
 
 ## Exercise 1.2: Experiment with Local Variables in a Nested Loop
+
 # Try to execude the following block of code:
 println("Defining a local variable within a loop:")
 for i in 1:3
@@ -59,9 +63,9 @@ println("Section 3: Working with `global` and `local` Keywords")
 # Conversely, 'local' explicitly defines a local variable, particularly in contexts where global inference might occur.
 
 ## Exercise 2.1: Experiment with Local Variables  in a Potentially Global Context Using `local`
-# Try to execude the following block of code. The objective is to redefine the 'explicit_local_variable' to "end"
-# within the following loop.
+# The objective is to redefine the value of 'explicit_local_variable' to "end" within the following loop.
 
+# Try to execude the following block of code.
 explicit_local_variable = "start"
 println("At the start of the loop, explicit_local_variable is: ", explicit_local_variable)
 for i in 1:3

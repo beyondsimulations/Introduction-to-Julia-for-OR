@@ -28,12 +28,14 @@ println("Section 1: Creating Basic Plots")
 
 ## Exercise 1.1: Create a scatter plot called 'scatter_plot' for some random data on a range from 1 to 20.
 # The arguments inside the functions can be the same as before, but we need to replace 'plot' by 'scatter'.
+# Note, that the test are not so sophisticated here due to the structure of plots and their exploratory nature.
 
 # YOUR CODE BELOW
 x = 1:10
 y = rand(10)
 scatter_plot = scatter(x, y, title="Simple Scatter Plot", xlabel="x axis", ylabel="y axis", legend=false)
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert @isdefined scatter_plot
 println("Simple scatter plot created successfully!")
@@ -54,6 +56,7 @@ x = 1:10
 y = rand(10)
 custom_line_plot = plot(x, y, title="Customized Line Plot", xlabel="x axis", ylabel="y axis", legend=false, line=:dash, linewidth=3, color=:red)
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert @isdefined custom_line_plot
 println("Customized line plot created successfully!")
@@ -68,8 +71,8 @@ display(custom_line_plot)
 # multi_plot = plot(x, a, title="Many Series", xlabel="x axis", ylabel="y axis", label="a")
 # plot!(multi_plot, x, b, label="b")    
 # Note: The '!' after plot adds to the existing plot
-
 # Create a plot called 'multi_series_plot' with three data series 'y1', 'y2' and 'y3'.
+
 # YOUR CODE BELOW
 x = 1:10
 y1 = rand(10)
@@ -79,7 +82,8 @@ multi_series_plot = plot(x, y1, title="Multiple Series", xlabel="x axis", ylabel
 plot!(multi_series_plot, x, y2, label="y2")
 plot!(multi_series_plot, x, y3, label="y3")  
 
-# Confirm successful addition of multiple series
+# YOUR CODE ABOVE
+# Test your answer
 @assert @isdefined y1
 @assert @isdefined y2
 @assert @isdefined y3
@@ -96,12 +100,15 @@ println("Section 3: Saving Plots to Files")
 # Replace 'path' with the path, the 'filename' with the actual name and 'format' with the file format, e.g. pdf, png or svg.
 
 ## Exercise 3.1: Save a plot to a file.
-# Save the previously created plot 'multi_series_plot' to a file as PDF.
-# Save it in the folder 'ExampleData' and name it 'saved_plot.pdf'.
-savefig(multi_series_plot, "ExampleData/saved_plot.pdf")
+# Save the previously created plot 'multi_series_plot' to a file as PNG.
+# Save it in the folder 'ExampleData' and name it 'saved_plot.png'.
 
-# Confirm successful saving of the plot
-@assert  isfile("ExampleData/saved_plot.pdf") "File does not exist yet."
+# YOUR CODE BELOW
+savefig(multi_series_plot, "ExampleData/saved_plot.png")
+
+# YOUR CODE ABOVE
+# Test your answer
+@assert  isfile("ExampleData/saved_plot.png") "File does not exist yet."
 println("Plot saved to 'saved_plot.pdf' successfully!")
 
 ## Conclusion

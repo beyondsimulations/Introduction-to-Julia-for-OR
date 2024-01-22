@@ -26,6 +26,7 @@ println("Section 1: Creating DataFrames")
 # YOUR CODE BELOW
 employees = DataFrame(Name = ["John", "Mike", "Frank"], Age = [28, 23, 37], Salary = [50000, 62000, 90000])
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert employees == DataFrame(Name = ["John", "Mike", "Frank"], Age = [28, 23, 37], Salary = [50000, 62000, 90000])
 println("DataFrame created successfully!")
@@ -46,6 +47,7 @@ println("Section 2: Accessing and Modifying Data")
 ages = employees.Age
 println("Ages column: ", ages)
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert ages == [28, 23, 37]
 println("Correct, the Ages column is: ", ages)
@@ -55,10 +57,11 @@ println("Correct, the Ages column is: ", ages)
 # YOUR CODE BELOW
 employees.Salary[1] = 59000
 
+# YOUR CODE ABOVE
 # Test your answer
-@assert df.Salary[1] == 59000
+@assert employees.Salary[1] == 59000
 println("Modified DataFrame: ")
-println(df)
+println(employees)
 
 ## Section 3: Filtering Data
 # --------------------------
@@ -76,6 +79,7 @@ println("Section 3: Filtering Data")
 # YOUR CODE BELOW
 high_earners = employees[employees.Salary .> 60000, :]
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert nrow(high_earners) == 2
 println("High earners: ")
@@ -94,11 +98,14 @@ println("Section 4: Basic Data Manipulation")
 # YOUR CODE BELOW
 sorted_df = sort(employees, :Age)
 
+# YOUR CODE ABOVE
 # Test your answer
 @assert sorted_df.Age[1] == 23
 println("DataFrame sorted by age: ")
 println(sorted_df)
 
+# If you have more complicated data structures, take a look at JSON files which can be used to work with
+# all kind of differently structured data sets.
 ## Conclusion
 # -----------
 println("Fantastic work! You've completed the tutorial on DataFrames in Julia.")
