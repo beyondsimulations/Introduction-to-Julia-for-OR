@@ -36,8 +36,7 @@ variables should be called 'profit' and have a range from 1:10. It has an upper
 bound of 12. The objective should be a Maximization of the sum of all 'profits'. =#
 
 # YOUR CODE BELOW
-@variable(another_model, profits[1:8] >= 0)
-@objective(another_model, Max, sum(profits[i] for i in 1:8))
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -64,7 +63,7 @@ maximally 100. =#
 Each profit defined in the previous task should be less than or equal to 12. =#
 
 # YOUR CODE BELOW
-@constraint(another_model, maxProfit[i in 1:8], profits[i] <= 12)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -85,12 +84,12 @@ This would create a constraint called constraintName for each i - thus 1,2, and 
 where variableName[1], variableName[2] are restricted to be maximally 50 and 
 variableName[3] was not restricted. =#
 
-# Exercise 47.1: 
+# Exercise 3.1: 
 #= Add a conditional constraint 'smallProfit' to the previous model. Condition: Only 
 the first 4 variables profit have to be lower than 5. =#
 
 # YOUR CODE BELOW
-@constraint(another_model, smallProfit[i in 1:8; i <= 4], profits[i] <= 5)
+
 
 # YOUR CODE ABOVE
 # Test your answer

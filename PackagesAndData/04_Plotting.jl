@@ -43,9 +43,7 @@ to replace 'plot' by 'scatter'. Note, that the test are not so sophisticated her
 to the structure of plots and their exploratory nature. =#
 
 # YOUR CODE BELOW
-x = 1:10
-y = rand(10)
-scatter_plot = scatter(x, y, title="Simple Scatter Plot", xlabel="x axis", ylabel="y axis", legend=false)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -67,9 +65,7 @@ adding 'color=:red'. =#
 Hint: You can customize the appearance of a random line plot as you like. =#
 
 # YOUR CODE BELOW
-x = 1:10
-y = rand(10)
-custom_line_plot = plot(x, y, title="Customized Line Plot", xlabel="x axis", ylabel="y axis", legend=false, line=:dash, linewidth=3, color=:red)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -94,13 +90,7 @@ Note: The '!' after plot adds to the existing plot. Now, create a plot called
 'multi_series_plot' with three data series 'y1', 'y2' and 'y3'. =#
 
 # YOUR CODE BELOW
-x = 1:10
-y1 = rand(10)
-y2 = rand(10)
-y3 = rand(10)
-multi_series_plot = plot(x, y1, title="Multiple Series", xlabel="x axis", ylabel="y axis", label="y1")
-plot!(multi_series_plot, x, y2, label="y2")
-plot!(multi_series_plot, x, y3, label="y3")  
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -127,7 +117,7 @@ if you want to save your file as PDF, you would just name it "path/filename.pdf"
 the folder 'ExampleData' and name it 'saved_plot.png'. =#
 
 # YOUR CODE BELOW
-savefig(multi_series_plot, "ExampleData/saved_plot.png")
+
 
 # YOUR CODE ABOVE
 # Test your answer

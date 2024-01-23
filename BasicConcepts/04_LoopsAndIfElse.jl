@@ -42,9 +42,7 @@ to 0. The sum you compute should accumulate in this variable. =#
 sum_numbers = 0
 
 # YOUR CODE BELOW
-for i in 1:5
-    sum_numbers += i  # Increment sum_numbers by i during each iteration.
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -62,11 +60,7 @@ let # First, we start a scope block for the loop!
 sum_evens = 0
 
 # YOUR CODE BELOW
-for i in 1:10
-    if i % 2 == 0
-        sum_evens += i  # Accumulate only even numbers.
-    end
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -85,12 +79,7 @@ fruits = ["apple", "banana", "cherry"]
 current_fruit = "None"
 
 # YOUR CODE BELOW
-for fruit in fruits
-    current_fruit = fruit
-    if current_fruit == "banana"
-        break  # Exit the loop if the current fruit is "banana".
-    end
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -115,11 +104,7 @@ current_value = 10
 
 
 # YOUR CODE BELOW
-println("Subtracting from 10 until less than 3:")
-while current_value >= 3
-    println(current_value)  # Output the current value.
-    current_value -= 1  # Decrement current_value by 1.
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -137,14 +122,7 @@ let # But first, new scope block
 first_multiple_of_7 = 0
 
 # YOUR CODE BELOW
-i = 51  # Start checking from 51 as we seek a multiple greater than 50.
-while true
-    if i % 7 == 0
-        first_multiple_of_7 = i
-        break  # Exit the loop once the first multiple is found.
-    end
-    i += 1  # Increment i for the next iteration.
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -170,11 +148,7 @@ numbers2 = [4, 5, 6]
 products = []
 
 # YOUR CODE BELOW
-for num1 in numbers1
-    for num2 in numbers2
-        push!(products, num1 * num2)  # Compute product and add to 'products' array.
-    end
-end
+
 
 # YOUR CODE ABOVE
 # Test your answer

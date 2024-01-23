@@ -34,7 +34,7 @@ by typing '?' int the terminal. Afterwards, just typethe function nam for an
 explanation. =#
 
 # YOUR CODE BELOW
-read_matrix = readdlm("ExampleData/matrix.csv", ',')
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -61,7 +61,7 @@ data = DataFrame(Name = ["Alice", "Bob", "Charlie"], Age = [25, 30, 35])
 csv_file_path = "ExampleData/table_out.csv"
 
 # YOUR CODE BELOW
-CSV.write(csv_file_path, data)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -76,7 +76,7 @@ to familiarize yourself with the syntax. Note, that you need to provide a sink f
 the data wehen using CSV.read(), e.g. a DataFrame. =#
 
 # YOUR CODE BELOW
-read_data = CSV.read("ExampleData/table_in.csv", DataFrame)
+
 
 # YOUR CODE ABOVE
 # Test your CSV reading

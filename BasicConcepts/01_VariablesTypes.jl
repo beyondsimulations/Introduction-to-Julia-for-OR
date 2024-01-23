@@ -30,7 +30,7 @@ variable_name = value =#
 # Declare a variable named 'x' and assign it the value 1
 
 # YOUR CODE BELOW
-x = 1
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -42,7 +42,7 @@ println("Great, you have correctly assigned the value $x to the variable 'x'.")
 # Declare a variable named 'hi' and assign it the string  "Hello, Optimization!"
 
 # YOUR CODE BELOW
-hi = "Hello, Optimization!"
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -63,7 +63,7 @@ To check the type of a variable, use the typeof() function. =#
 # Create an Integer variable 'answerUniverse' and set it to 42
 
 # YOUR CODE BELOW
-answerUniverse = 42
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -74,7 +74,7 @@ println("Great, the answer to all questions on the universe is $answerUniverse n
 # Create a Float variable 'money' and set it to 1.35
 
 # YOUR CODE BELOW
-money = 1.35
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -85,7 +85,7 @@ println("Perfect, the you have stored $money in the variable 'money'.")
 # Create a Boolean variable 'isStudent' and set it to true
 
 # YOUR CODE BELOW
-isStudent = true
+
 
 # YOUR CODE ABOVE
 # Test your answer

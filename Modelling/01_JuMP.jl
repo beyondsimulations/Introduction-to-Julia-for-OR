@@ -58,8 +58,7 @@ that represent the the number of units produced in our problem for our model
 'model'. =#
 
 # YOUR CODE BELOW
-@variable(model, productA >= 0)
-@variable(model, productB >= 0)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -92,8 +91,7 @@ of the problem description in this tutorial. Call the first constraint
 'cutting_constraint' and the second constrant 'finishing_constraint'. =#
 
 # YOUR CODE BELOW
-@constraint(model, cutting_constraint, 2*productA + 4*productB <= 40) 
-@constraint(model, finishing_constraint, 4*productA + 3*productB <= 60)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -118,7 +116,7 @@ The objective is to maximize profit based on the values of 'productA' and
 'productB'. =#
 
 # YOUR CODE BELOW
-@objective(model, Max, 100*productA + 150*productB)
+
 
 # YOUR CODE ABOVE
 # Test your answer

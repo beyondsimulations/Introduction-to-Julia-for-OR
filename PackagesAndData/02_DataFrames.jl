@@ -30,7 +30,7 @@ John is 28 years old and earns 50000, Mike is 23 years old and earns 62000. Fran
 37 years old and earns 90000. =#
 
 # YOUR CODE BELOW
-employees = DataFrame(Name = ["John", "Mike", "Frank"], Age = [28, 23, 37], Salary = [50000, 62000, 90000])
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -49,14 +49,14 @@ value to the desired cell. To access the column 'name' in our DataFrame with
 employees, we could do: 
 employees.Name 
 To access the third name specifically, we could do: 
-employees.Name[3] =#
+employees.Name[3] 
+=#
 
 ## Exercise 2.1: 
 # Access the 'Age' column from the DataFrame and save it in a new variable 'ages.
 
 # YOUR CODE BELOW
-ages = employees.Age
-println("Ages column: ", ages)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -67,7 +67,7 @@ println("Correct, the Ages column is: ", ages)
 # Update John's salary to 59000.
 
 # YOUR CODE BELOW
-employees.Salary[1] = 59000
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -91,7 +91,7 @@ allFranks = filter(row -> row.Name == "Frank", employees) =#
 the resulting employees in the DataFrame 'high_earners'. =#
 
 # YOUR CODE BELOW
-high_earners = employees[employees.Salary .> 60000, :]
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -112,7 +112,7 @@ function, type '?' into the REPL (terminal) and type 'sort'. =#
 # Sort the DataFrame based on the 'Age' column and save it as 'sorted_df'.
 
 # YOUR CODE BELOW
-sorted_df = sort(employees, :Age)
+
 
 # YOUR CODE ABOVE
 # Test your answer

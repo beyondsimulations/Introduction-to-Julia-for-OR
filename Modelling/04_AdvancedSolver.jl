@@ -22,7 +22,8 @@ HiGHS. =#
 
 model = Model(HiGHS.Optimizer)
 
-#= Different options for the HiGHS solver can be found here: https://ergo-code.github.io/HiGHS/dev/options/definitions/
+#= Different options for the HiGHS solver can be found here: 
+https://ergo-code.github.io/HiGHS/dev/options/definitions/ 
 
 Note, that some options are solver specific and some options apply to all solvers, 
 as JuMP itself can work with many different solvers just by changing the model 

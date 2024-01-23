@@ -24,7 +24,7 @@ comparison = 5 == 5  # This will store 'true' in 'comparison'. =#
 # Compare if 10 is greater than 5 and store the result in 'comparison1'.
 
 # YOUR CODE BELOW
-comparison1 = 10 > 5
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -36,9 +36,7 @@ println("comparison1 is ", comparison1)
 if 'x' is not equal to 'y' and store the result in 'comparison2'. =#
 
 # YOUR CODE BELOW
-x = "Hello"
-y = "world"
-comparison2 = x != y
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -60,7 +58,7 @@ program flow. =#
 'hello'. Store the result in 'logic1'. =#
 
 # YOUR CODE BELOW
-logic1 = (10 > 5) && "hello" == "hello"
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -72,7 +70,7 @@ println("logic1 is ", logic1)
 'hello'. Store the result in 'logic2'. =#
 
 # YOUR CODE BELOW
-logic2 = 10 < 5 || "hello" == "hello"
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -84,8 +82,7 @@ println("logic2 is ", logic2)
 use the NOT operator to invert 'logic3'. Store the result in 'logic4'. =#
 
 # YOUR CODE BELOW
-logic3 = 10 > 5
-logic4 = !logic3
+
 
 # YOUR CODE ABOVE
 # Test your answer

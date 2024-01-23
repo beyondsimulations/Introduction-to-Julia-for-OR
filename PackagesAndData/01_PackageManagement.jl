@@ -25,7 +25,7 @@ the local namespace for direct access. =#
 # Import the Pkg module to start managing packages effectively.
 
 # YOUR CODE BELOW
-import Pkg
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -47,7 +47,7 @@ function. Replace 'PackageName' with the actual package name you wish to add. =#
 # Use Pkg.add() to add the Package 'DataFrames' that we will use later.
 
 # YOUR CODE BELOW
-Pkg.add("DataFrames")
+
 
 # YOUR CODE ABOVE
 # Test your answer

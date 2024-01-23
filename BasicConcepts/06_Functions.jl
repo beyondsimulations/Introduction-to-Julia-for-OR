@@ -32,9 +32,7 @@ implicitly. In Julia, the last expression is automatically returned, making the
 two parameters and returns their sum. =#
 
 # YOUR CODE BELOW
-function add(x, y)
-    x + y
-end
+
 
 # YOUR CODE ABOVE
 # Test your function
@@ -70,9 +68,7 @@ takes two parameters and implicitly returns their difference. The implicit retur
 feature makes your code cleaner and more concise. =#
 
 # YOUR CODE BELOW
-function subtract(x, y)
-    x - y 
-end
+
 
 # YOUR CODE ABOVE
 # Test your function
@@ -93,9 +89,10 @@ add_two(a,b) = a + b =#
 # Create an anonymous function 'multiply' that multiplies two numbers.
 
 # YOUR CODE BELOW
-multiply = (x, y) -> x * y  # Define an anonymous function for multiplication.
 
-# Test your anonymous function
+
+# YOUR CODE ABOVE
+# Test your function
 @assert multiply(10, 5) == 50  "The result is $(multiply(10, 5)) but should be 50."
 
 ## Section 4: Multiple Dispatch

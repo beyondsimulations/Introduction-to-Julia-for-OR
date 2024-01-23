@@ -43,9 +43,7 @@ continuous variable for 'new_model', 'integer_var' as an integer variable for
 'new_model', and 'binary_var' as a binary variable for 'new_model'. =#
 
 # YOUR CODE BELOW
-@variable(new_model, continuous_var)
-@variable(new_model, integer_var, Int)
-@variable(new_model, binary_var, Bin)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -80,7 +78,7 @@ your instance. =#
 lower bounds. =#
 
 # YOUR CODE BELOW
-@variable(new_model, X[1:8] >= 0)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -92,7 +90,7 @@ println("Array of variables created successfully!")
 of 3 x 3. =#
 
 # YOUR CODE BELOW
-@variable(new_model, Y[1:3, 1:3], Bin)
+
 
 # YOUR CODE ABOVE
 # Test your answer
@@ -106,8 +104,7 @@ println("Matrix of variables created successfully!")
 N of size 1, 2, ..., 6 with non-negative lower bounds. =#
 
 # YOUR CODE BELOW
-N = 1:6
-@variable(new_model, W[i in N] >= 0)
+
 
 # YOUR CODE ABOVE
 # Test your answer
