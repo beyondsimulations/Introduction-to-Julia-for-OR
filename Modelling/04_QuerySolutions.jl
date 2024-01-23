@@ -1,5 +1,5 @@
 # =====================================================
-# Evaluating the Results of a an Optimization in JuMP
+# Evaluating the Results of an Optimization in JuMP
 # =====================================================
 
 # This Julia script introduces a basic transportation optimization problem to demonstrate how to evaluate optimization results in JuMP.
@@ -7,14 +7,14 @@
 # Make sure to have the JuMP package installed to follow this tutorial.
 # Follow the instructions, write your code in the designated code blocks, and confirm your understanding with @assert statements.
 
-using JuMP
+using JuMP, HiGHS
 
 # ---------------------------
 # Section 49: Defining the Model
 # ---------------------------
 println("Section 49: Defining the Model")
 
-model = Model()
+model = Model(HiGHS.Optimizer)
 
 # Define data for the problem
 costs = [2 3; 4 1]  # Shipping costs from warehouses to stores
@@ -26,14 +26,10 @@ demand = [15, 30]    # Demand at each store
 
 # Define constraints
 # Supply constraints
-for i in 1:2
-    @constraint(model, sum(shipping[i, j] for j in 1:2) <= supply[i])
-end
+@constraint(model, [i in 1:2], sum(shipping[i, j] for j in 1:2) <= supply[i])
 
 # Demand constraints
-for j in 1:2
-    @constraint(model, sum(shipping[i, j] for i in 1:2) == demand[j])
-end
+@constraint(model, [j in 1:2], sum(shipping[i, j] for i in 1:2) == demand[j])
 
 # Define the objective function (minimize total shipping cost)
 @objective(model, Min, sum(costs[i, j] * shipping[i, j] for i in 1:2, j in 1:2))

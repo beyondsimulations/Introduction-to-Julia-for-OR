@@ -44,11 +44,9 @@ println("Section 2: Adding Variables to the Model")
 # To define a variable for the model, we can call the Macro @variable(). Inside the 
 # braces, we nee to specify the model, the variable name and it's type and/or bounds.
 # For example:
-# @variable(modelName, variableName >= 0) # This defines a continous variable equal or larger 0.
-# @variable(modelName, 0 <= variableName <= 1) # This defines a continous variable in an intervall.
-# @variable(modelName, 0 <= variableName, Bin) # This defines a binary variable.
-# @variable(modelName, 0 <= variableName, Int) # This defines a integer variable.
-# Note, that you will have to change 'modelName' and 'variableName' according to your instance.
+# @variable(modelName, variableName >= 0)      
+# This defines a continous variable equal or larger 0.
+
 
 ## Exercise 2.1: Create two continous variables equal or larger 0 called 'productA'
 # and 'productB' that represent the the number of units produced in our problem for our model 'model'.
@@ -71,9 +69,10 @@ println("Section 2: Adding Variables to the Model")
 @assert lower_bound(productB) == 0
 println("Variables added to the model successfully!")
 
+
 ## Section 3: Setting Up Constraints
 # ---------------------------
-println("Section 38: Setting Up Constraints")
+println("Section 3: Setting Up Constraints")
 
 # To define constraints, we use the Macro constraint(). Inside the 
 # braces, we nee to specify the model and the actual constraint. For example:
@@ -99,7 +98,7 @@ println("The optimization later will show, whether the formulation was correct."
 
 ## Section 4: Defining the Objective Function
 # ---------------------------
-println("Section 39: Defining the Objective Function")
+println("Section 4: Defining the Objective Function")
 
 # To define an objective function for the model, we can call the Macro @objective(). Inside the 
 # braces, we first specify the model, the direction - 'Max' or 'Min' and the actual objective.
@@ -132,6 +131,10 @@ println("Model solved. Status: ", status)
 # We can then get the values of the variables as follows:
 val_productA = value(productA)
 val_productB = value(productB)
+# Note, that the values can be slightly off due to the nature of Float64 numbers!
+println("Optimal solution:")
+println("Product A quantity: $val_productA")
+println("Product B quantity: $val_productB")
 
 # Test your answer
 @assert status == MOI.OPTIMAL "Sorry, something didn't work out as the model status is $status".
@@ -140,7 +143,7 @@ println("Solution: Product A = ", val_productA, ", Product B = ", val_productB)
     val_productA should be 12 not $val_productA"
 @assert val_productB ≈ 4 atol=1e-4 "Although you have a solution, 
     val_productB should be 4 not $val_productB"
-println("You have solved the modell correctly!")
+println("You have solved the model correctly!")
 
 ## Conclusion
 # ---------------------------
