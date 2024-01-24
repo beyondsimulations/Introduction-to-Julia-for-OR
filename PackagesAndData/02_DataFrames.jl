@@ -84,7 +84,8 @@ To filter the DataFrame to include only employees names "Frank" we could do:
 allFranks = employees[employees.Name .== "Frank", :]
 Alternatively, the filter function provides a powerful tool to extract subsets of 
 data based on a condition:
-allFranks = filter(row -> row.Name == "Frank", employees) =#
+allFranks = filter(row -> row.Name == "Frank", employees) 
+=#
 
 ## Exercise 3.1: 
 #= Filter the DataFrame to include only employees with salaries above 60000. Save 

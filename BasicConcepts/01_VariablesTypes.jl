@@ -24,7 +24,8 @@ println("Section 1: Variables")
 #= Introduction to Variables:
 A variable in Julia can be used to store data like numbers, text, or more
 complex types. To declare a variable in Julia, simply assign a value to a name:
-variable_name = value =#
+variable_name = value 
+=#
 
 ## Exercise 1.1: 
 # Declare a variable named 'x' and assign it the value 1

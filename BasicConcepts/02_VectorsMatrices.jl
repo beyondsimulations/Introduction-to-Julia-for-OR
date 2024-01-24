@@ -73,8 +73,9 @@ println("Section 2: Matrices")
 #= A matrix in Julia is a 2D array, great for linear algebra and data representation.
 Create matrices with square brackets, separate elements with spaces, rows with 
 semicolons. Access elements with square brackets (e.g., matrix[2,2]). Add matrices 
-of the same dimensions element-wise. Use the '.' syntax for element-wise operations 
-(e.g., matrix = 1 .+ matrix). =#
+of the same dimensions element-wise. Use the '.' syntax for element-wise operations e.g.:
+ matrix = 1 .+ matrix 
+=#
 
 ## Exercise 2.1: 
 # Create a 2x3 matrix 'my_matrix' with the values: 1 2 3; 4 5 6

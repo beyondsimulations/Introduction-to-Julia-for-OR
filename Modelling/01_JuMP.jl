@@ -108,7 +108,8 @@ println("Section 4: Defining the Objective Function")
 #= To define an objective function for the model, we can call the Macro 
 @objective(). Inside the braces, we first specify the model, the direction - 'Max' 
 or 'Min' and the actual objective. For example:
-@objective(model, Max, 2*variableA + 3*variableB) =#
+@objective(model, Max, 2*variableA + 3*variableB) 
+=#
 
 ## Exercise 3.1: 
 #= Create the objective function based on the problem description of this tutorial. 

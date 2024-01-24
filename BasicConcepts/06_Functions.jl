@@ -83,7 +83,8 @@ operations. They are particularly useful for operations that are passed as argum
 to higher-order functions or used for short, one-off computations. Syntax for 
 anonymous functions can be either of the following:
 add_two = (a,b) -> a + b
-add_two(a,b) = a + b =#
+add_two(a,b) = a + b 
+=#
 
 ## Exercise 3.1:
 # Create an anonymous function 'multiply' that multiplies two numbers.
