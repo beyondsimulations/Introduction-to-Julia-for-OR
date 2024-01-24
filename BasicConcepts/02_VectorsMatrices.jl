@@ -16,7 +16,10 @@ execute the corresponding code cell. =#
 println("Section 1: Vectors")
 
 #= Vectors in Julia are one-dimensional arrays used to store sequences of elements.
-They're powerful for numerical operations and data handling.
+They're powerful for numerical operations and data handling. Create matrices with 
+square brackets, separate elements with commas. For example:
+myvector = [1,2,3,4,5]
+This creates a vector 'myvector' that contains the elements 1,2,3,4,5.
 Vectors are mutable, and you can add elements with push!() or pushfirst!() 
 (the '!' denotes function modification of the input). Remove elements with pop!() 
 or popfirst!(). Use '?' in the REPL for function details. Access elements with 
