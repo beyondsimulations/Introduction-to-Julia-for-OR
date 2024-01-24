@@ -119,7 +119,8 @@ result3 = operation("Hello, ", 20)        # Generic implementation.
 
 ## Exercise 4.1: 
 #= Choose the result that should be asserted in the following to equal the expected 
-value on the right side of the conditional statement. =#
+value on the right side of the conditional statement. Hint: The answer is easy, you
+just have to change the comparisons. =#
 
 # YOUR CHANGES BELOW
 @assert result1 == "Hello, World!"

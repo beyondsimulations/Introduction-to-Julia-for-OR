@@ -61,7 +61,8 @@ above to allow the execution of the code. =#
 
 # Test your answer
 @assert nestedloop_variable == 9
-println("Now, the loop works and the value of the 'nestedloop_variable' is: ", loop_variable)
+println("Now, the loop works and the value of the 
+    'nestedloop_variable' is: ", nestedloop_variable)
 
 ## Section 2: Working with `global` and `local` Keywords
 # ---------------------------------------------------
