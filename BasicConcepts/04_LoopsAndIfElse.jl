@@ -72,8 +72,35 @@ end # Here we end the scope block again.
 ## Exercise 1.3: 
 #= Iterate over each fruit in the 'fruits' array, store the current fruit  in 
 'current_fruit', and exit the loop if 'current_fruit' is "banana". Hint: The 
-'break' statement can be utilized to exit the loop based on a condition. The next 
-lines initialize the fruits array and current_fruit variable. =#
+'break' statement can be utilized to exit the loop based on a condition. To 
+check some condition, we can use 'if' statements. For example:
+
+loop_number = 0
+for x in 1:10
+    loop_number = x
+    if loop_number == 4
+        break
+    end
+end
+
+This would exit the loop in iteration 4, as the condition loop_number == 4
+would be true here. We can also chain 'if' statements. For example:
+
+loop_number = 0
+for x in 1:10
+    loop_number = x
+    if loop_number <= 2
+        println(loop_number)
+    ifelse loop_number == 3
+        print("We reached 3!)
+    else 
+        break
+    end
+end
+
+This would print '1', then '2', then 'We reached 3!'. Afterwards the
+loop would en, as the break statement kicks in. The next lines initialize the 
+fruits array and current_fruit variable. =#
 let # But first, another scope block.
 fruits = ["apple", "banana", "cherry"]
 current_fruit = "None"
