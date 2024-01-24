@@ -47,7 +47,7 @@ println("Optimization model created successfully!")
 println("Section 2: Adding Variables to the Model")
 
 #= To define a variable for the model, we can call the Macro @variable(). Inside the 
-braces, we nee to specify the model, the variable name and it's type and/or bounds.
+brackets, we need to specify the model, the variable name and it's type and/or bounds.
 For example:
 @variable(modelName, variableName >= 0)
 This defines a continous variable equal or larger 0. =#
@@ -78,7 +78,7 @@ println("Variables added to the model successfully!")
 # ---------------------------
 println("Section 3: Setting Up Constraints")
 
-#= To define constraints, we use the Macro constraint(). Inside the braces, we 
+#= To define constraints, we use the Macro constraint(). Inside the brackets, we 
 need to specify the model and the actual constraint. For example:
 constraint(modelName, constraintName, 4 * variableName <= 100)
 This defines a constraint that ensures, that the variable 'variableName' can 
@@ -106,7 +106,7 @@ println("The optimization later will show, whether the formulation was correct."
 println("Section 4: Defining the Objective Function")
 
 #= To define an objective function for the model, we can call the Macro 
-@objective(). Inside the braces, we first specify the model, the direction - 'Max' 
+@objective(). Inside the brackets, we first specify the model, the direction - 'Max' 
 or 'Min' and the actual objective. For example:
 @objective(model, Max, 2*variableA + 3*variableB) 
 =#
