@@ -32,8 +32,8 @@ Now, we can define an objective function with the container. For example:
 
 ## Exercise 1.1: 
 #= Define an array of variables and an objective function for 'another_model'. The 
-variables should be called 'profit' and have a range from 1:8. It has an upper 
-bound of 12. The objective should be a Maximization of the sum of all 'profits'. =#
+variables should be called 'profit' and have a range from 1:8. It has a lower 
+bound of 0. The objective should be a Maximization of the sum of all 'profits'. =#
 
 # YOUR CODE BELOW
 
